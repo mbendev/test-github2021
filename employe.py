@@ -12,7 +12,7 @@ class Employe:
 class Responsable(Employe):
   def __init__(self, identifiant, nom, rang):  
     super().__init__(identifiant, nom)
-	self.type = "Responsable"
+	  self.type = "Responsable"
     self.number = rang
   
   def __repr__(self):
