@@ -3,17 +3,21 @@ class Employe:
   def __init__(self, identifiant, nom):
     self.id = identifiant
     self.nom = nom
+	self.type = "Employé"
 
   def __repr__(self):
-    return "Employé {} : {}".format(self.id, self.nom)
+	chaine = "{} {} : {}".format(sel.type, self.id, self.nom)
+    return chaine
     
 class Responsable(Employe):
   def __init__(self, identifiant, nom, rang):  
     Employe.__init__(self, identifiant, nom)
+	self.type = "Responsable"
     self.number = rang
   
   def __repr__(self):
-    return "Responsable (number {}) {} : {}".format(self.number, self.id, self.nom)
+    chaine = "{} {} : {} (number {})".format(self.type, self.id, self.nom, self.number)
+    return chaine
   
   def engueuler(self, employe):
     print("Alors, tu bosses un peu {} ou quoi ?!!".format(employe.nom))
